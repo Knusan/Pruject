@@ -3,17 +3,25 @@ using System.Collections;
 
 public class Tower : MonoBehaviour {
 	public float range;
+	public float fireIntervall;
+	private Timer timer;
 	// Use this for initialization
 	void Start () {
 		CircleCollider2D collider = gameObject.AddComponent<CircleCollider2D> ();
 		collider.radius = range;
 		collider.isTrigger = true;
+		timer = new Timer (5);
+		timer.OnTimerFire += OnTimerFire;
+		timer.Start();
+	}
+
+	public void OnTimerFire(object sender, TimerEventArgs args){
+	
 
 	}
-	
 	// Update is called once per frame
 	void Update () {
-	
+		timer.Update (Time.deltaTime);
 
 	}
 
