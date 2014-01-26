@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class UnitEx : MonoBehaviour {
+public class Enemy : MonoBehaviour {
 	public GameObject MyPath;
 	public float MySpeed;
 

@@ -11,7 +11,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 212: {fileID: 21200000}
   m_Layer: 0
-  m_Name: UnitEx
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40,6 +40,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyPath: {fileID: 0}
+  MySpeed: 0
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
