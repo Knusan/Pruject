@@ -12,11 +12,10 @@ public class Timer {
 	private float goalTime;
 	private float delay;
 	private int intervals;
-	private bool running;
 
 	public Timer(float delay){
 		this.delay = delay;
-		this.intervals = 1;
+
 	}
 	public Timer(float delay, int intervals){
 		this.intervals = intervals;
@@ -25,11 +24,12 @@ public class Timer {
 	public void Start(){
 		currentTime = 0;
 		goalTime = delay;
-		running = true;
+		if (intervals == 0)
+			intervals = 1;
 	}
 
 	public void Update(float dt){
-		if (!running || intervals == 0) return;
+		if (intervals == 0) return;
 
 		currentTime += dt;
 		if (currentTime >= goalTime) {
@@ -38,6 +38,8 @@ public class Timer {
 				args.TimeOffset = currentTime - goalTime;
 				currentTime = 0;
 				intervals--;
+			
+
 				OnTimerFire(this, args);
 			}
 
