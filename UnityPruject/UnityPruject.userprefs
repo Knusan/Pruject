@@ -1,8 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Tower.cs">
     <Files>
-      <File FileName="Assets\Tower.cs" Line="31" Column="3" />
+      <File FileName="Assets\Tower.cs" Line="38" Column="4" />
+      <File FileName="Assets\Timer.cs" Line="37" Column="85" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
