@@ -34,8 +34,7 @@ public class Timer {
 		currentTime += dt;
 		if (currentTime >= goalTime) {
 			if(OnTimerFire != null){
-				TimerEventArgs args = new TimerEventArgs();
-				args.TimeOffset = currentTime - goalTime;
+				TimerEventArgs args = new TimerEventArgs(){TimeOffset = currentTime - goalTime};
 				currentTime = 0;
 				intervals--;
 			
